@@ -1,0 +1,46 @@
+**********************************
+*** Download git
+**********************************
+https://git-scm.com/download/mac
+
+# try a git gui:
+https://desktop.github.com/
+http://rowanj.github.io/gitx/
+https://www.sourcetreeapp.com/
+http://gitup.co/
+https://www.gitkraken.com/
+
+
+
+**********************************
+*** Clone
+**********************************
+git clone https://github.com/wcarmon/jamie-java;
+
+
+
+**********************************
+*** Checking for existing keys
+**********************************
+
+# see https://help.github.com/articles/checking-for-existing-ssh-keys/#platform-mac
+
+ls -al ~/.ssh | grep -i pub;
+pbcopy < ~/.ssh/id_rsa.pub;                 #mac
+#xclip -sel clip < ~/.ssh/id_rsa.pub;       # linux
+
+
+
+**********************************
+*** Generating a key
+**********************************
+# see https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-mac
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com";
+
+# follow the instructions
+
+pbcopy < ~/.ssh/id_rsa.pub;                 #mac
+#xclip -sel clip < ~/.ssh/id_rsa.pub;       # linux
+
+# paste the key into the repo
